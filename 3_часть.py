@@ -1,6 +1,4 @@
-s = []
-S = []
-with open("dataset_3363_1.txt") as inf:
+th open("dataset_3363_1.txt") as inf:
     for line in inf:
         s = line.strip().split(";")
         S.append(s)
