@@ -10,3 +10,9 @@ class LoginPageLocators():
     LOGIN_LINK = (By.ID,"login_link")
     LOGIN_FORM = (By.ID, "login_form")
     REGISTER_FORM = (By.ID, "register_form")
+
+class ProductPageLocators():
+    LOGIN_LINK = (By.ID, "login_link")
+    ADD_TO_BASKET = (By.CLASS_NAME,"btn.btn-lg.btn-primary.btn-add-to-basket")
+    INSPECT_BASKET = (By.LINK_TEXT,"http://selenium1py.pythonanywhere.com/ru/basket/")
+
