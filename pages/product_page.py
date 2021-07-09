@@ -27,6 +27,15 @@ class PageObject(BasePage):
         assert book_price == basket_price, "The price is wrong"
         time.sleep(2)
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_disappear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE),"Success message is presented, but should disappear"
+
+
+
 # def inspect_basket(self):
 #  assert self.is_element_present(*ProductPageLocators.INSPECT_BASKET), "No 'Inspect basket' button"
 #  inspect_basket = self.browser.find_element(*ProductPageLocators.INSPECT_BASKET)

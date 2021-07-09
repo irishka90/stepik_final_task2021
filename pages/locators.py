@@ -15,4 +15,5 @@ class ProductPageLocators():
     LOGIN_LINK = (By.ID, "login_link")
     ADD_TO_BASKET = (By.CLASS_NAME,"btn.btn-lg.btn-primary.btn-add-to-basket")
     INSPECT_BASKET = (By.LINK_TEXT,"http://selenium1py.pythonanywhere.com/ru/basket/")
+    SUCCESS_MESSAGE =(By.XPATH, "//*[@id='messages']/div[1]/div")
 
