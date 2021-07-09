@@ -14,9 +14,14 @@ class LoginPageLocators():
 class ProductPageLocators():
     LOGIN_LINK = (By.ID, "login_link")
     ADD_TO_BASKET = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
-    INSPECT_BASKET = (By.LINK_TEXT, "http://selenium1py.pythonanywhere.com/ru/basket/")
+
     SUCCESS_MESSAGE = (By.XPATH, "//*[@id='messages']/div[1]/div")
 
 
 class BasePageLocators():
     LOGIN_LINK = (By.ID, "login_link")
+    INSPECT_BASKET = (By.CSS_SELECTOR, "#default > header > div.page_inner > div > div.basket-mini.pull-right.hidden-xs > span > a")
+
+
+class BasketPageLocators():
+    CONTINUE_PURCHASE = (By.XPATH, "//*[@id='content_inner']/p/a")

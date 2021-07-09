@@ -1,5 +1,7 @@
 import math
+import time
 
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
@@ -26,8 +28,9 @@ class BasePage():
     def go_to_login_page(self):
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
-       # alert = self.browser.switch_to.alert
-       # alert.accept()
+
+    # alert = self.browser.switch_to.alert
+    # alert.accept()
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
@@ -61,3 +64,11 @@ class BasePage():
         except TimeoutException:
             return False
         return True
+
+    def go_to_basket(self):
+        assert self.is_element_present(*BasePageLocators.INSPECT_BASKET), "No 'Go to basket' button"
+
+        go_to_basket_btn = self.browser.find_element(*BasePageLocators.INSPECT_BASKET)
+        go_to_basket_btn.click()
+
+

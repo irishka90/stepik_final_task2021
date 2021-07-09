@@ -34,7 +34,4 @@ class PageObject(BasePage):
 
 
 
-# def inspect_basket(self):
-#  assert self.is_element_present(*ProductPageLocators.INSPECT_BASKET), "No 'Inspect basket' button"
-#  inspect_basket = self.browser.find_element(*ProductPageLocators.INSPECT_BASKET)
-#  inspect_basket.click()
+
