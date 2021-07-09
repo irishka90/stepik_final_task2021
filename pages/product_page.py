@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from .locators import ProductPageLocators
@@ -15,6 +17,7 @@ class PageObject(BasePage):
         success_comment_title = self.browser.find_element(By.CSS_SELECTOR,
                                                           "#messages > div:nth-child(1) > div > strong").text
         assert book_title == success_comment_title, "The title is wrong"
+        time.sleep(2)
 
     def book_price(self):
         book_price = self.browser.find_element(By.XPATH,
@@ -22,6 +25,7 @@ class PageObject(BasePage):
         basket_price = self.browser.find_element(By.XPATH,
                                                  "//*[@id='messages']/div[3]/div/p[1]/strong").text
         assert book_price == basket_price, "The price is wrong"
+        time.sleep(2)
 
 # def inspect_basket(self):
 #  assert self.is_element_present(*ProductPageLocators.INSPECT_BASKET), "No 'Inspect basket' button"
