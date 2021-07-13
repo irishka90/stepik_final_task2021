@@ -41,15 +41,7 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     new_link = browser.current_url
     new_page = BasketPage(browser, new_link)
     new_page.open()
-    new_page.empty_basket()
+    new_page.should_be_empty_basket()
 
 
-def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
-    login_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
-    page = PageObject(browser, login_link)
-    page.open()
-    page.go_to_basket()
-    new_link = browser.current_url
-    new_page = BasketPage(browser, new_link)
-    new_page.open()
-    new_page.empty_basket()
+

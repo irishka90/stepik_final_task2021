@@ -49,4 +49,3 @@ class LoginPage(BasePage):
         self.browser.implicitly_wait(3)
         assert self.is_element_present(
             *LoginPageLocators.SUCCESS_MESSAGE), "Success message is not presented,but should be"
-        self.browser.implicitly_wait(23)

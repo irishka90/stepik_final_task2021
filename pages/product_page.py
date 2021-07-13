@@ -31,13 +31,8 @@ class PageObject(BasePage):
             "Success message is presented, but should not be"
 
     def should_disappear_success_message(self):
-        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE),"Success message is presented, but should disappear"
+        assert self.is_disappeared(
+            *ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should disappear"
 
     def reregister_new_user(self):
         pass
-
-
-
-
-
-
