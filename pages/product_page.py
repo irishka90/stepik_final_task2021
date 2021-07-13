@@ -2,6 +2,7 @@ import time
 from selenium.webdriver.common.by import By
 from .locators import ProductPageLocators
 from .base_page import BasePage
+from .login_page import LoginPage
 
 
 class PageObject(BasePage):
@@ -31,6 +32,11 @@ class PageObject(BasePage):
 
     def should_disappear_success_message(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE),"Success message is presented, but should disappear"
+
+    def reregister_new_user(self):
+        pass
+
+
 
 
 
